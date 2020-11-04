@@ -10,12 +10,14 @@ const app = express()
 let server = http.createServer(app)
 const port = process.env.PORT||3000
 let io = socketIO(server) 
-server.listen(port,()=>{
-   console.log('Visit localhost:'+port);
-});
+async function start(){
+    server.listen(port,()=>{
+        console.log('Visit localhost:'+port);
+     });
+}
 
 
-app.use(express.static('./public'));
+app.use(express.static('../public'));
 app.get('/bomb/:number/:count', function (req, res) {
     res.setHeader('Content-Type', 'application/json');
     var number =  req.params.number;
@@ -41,7 +43,7 @@ io.on('connection', (socket)=>{
 
 
 
-function sendSms(number,count=1,socket){
+async function sendSms(number,count=1,socket){
     var success=0,failed=0;
     var data = require('./apidata.json');
 
@@ -76,3 +78,5 @@ function sendSms(number,count=1,socket){
    }
 
 }
+
+module.exports = start;
