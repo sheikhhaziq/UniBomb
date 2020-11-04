@@ -1,0 +1,8 @@
+{ "name": "Unibomb", 
+"short_name": "Unibomb", 
+"description": "Progressive Web App that lists games submitted to the A-Frame category in the js13kGames 2017 competition.", 
+"icons": [ 
+{ "src": "unicorx.png", "sizes": "32x32", "type": "image/png" }, { "src": "unicorx.png", "sizes": "128x128", "type": "image/png" }, { "src": "unicorx.png", "sizes": "152x152", "type": "image/png" }, { "src": "unicorx.png", "sizes": "192x192", "type": "image/png" }, { "src": "unicorx.png", "sizes": "256x256", "type": "image/png" }, { "src": "unicorx.png", "sizes": "512x512", "type": "image/png" }
+ ],
+ "start_url": "index.html",
+ "display": "standalone", "theme_color": "#ff3b30", "background_color": "#ff3b30"}

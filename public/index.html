@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unibomb</title>
+      <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#ff3b30">
+    <link rel="icon" href="unicorx.png" />
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <script>
+if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('/service-worker.js') .then((reg) => { console.log('Service worker registered.', reg); }); }); }
+    </script>
+</head>
+<body>
+    <ons-page style="text-align: center;">
+        <ons-toolbar style="background:#ff3b30;color:#fff">
+            <div class="center" style="color:#fff">
+              UniBomb
+            </div>
+          </ons-toolbar>
+          <ons-input
+            id="number"
+            style="margin-top: 100px;"
+            type="number"
+            placeholder="Number"
+            max="10"
+            float>
+          </ons-input>
+          <ons-button id="select" style="background:#ff3b30;color:#fff">Select</ons-button>
+          <ons-button style="background:#ff3b30;color:#fff">Count
+              <select style="background:#ff3b30;color:#fff;border:none" id="count">
+               
+                </select>
+            </ons-button><br />
+          <ons-button id="btn" style="margin-top: 10px;background:#ff3b30;color:#fff">Start Bombing</ons-button>
+          <div id="status" style="margin-top: 30px;"></div>
+    </ons-page>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+     <script>
+     var count = document.getElementById('count')
+        for(var i=1;i<201;i++){
+            var el = document.createElement('option');
+            el.value=i;
+            el.innerHTML =i;
+            count.appendChild(el);
+        }
+     </script>
+    <script src="js/index.js"></script>
+</body>
+</html>

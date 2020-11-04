@@ -1,0 +1,21 @@
+{
+  "name": "unibomb",
+  "version": "1.0.0",
+  "description": "SMS bombing system from Unicorx by sheikh haziq",
+  "main": "index.js",
+  "scripts": {
+    "start":"node ./index.js"
+  },
+  "keywords": [],
+  "author": "Sheikh Haziq",
+  "license": "ISC",
+  "bin":{
+    "unibomb":"./index.js",
+    "Unibomb":"./index.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
