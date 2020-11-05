@@ -6,17 +6,17 @@ SMS bombing system from Unicorx by sheikh haziq
 Use NPM to install Unibomb.
 
 ```bash
-npm i -g unibomb
+npm i unibomb
 ```
 ## or
 Use YARN to install Unibomb.
 ```bash
-yarn global add unibomb
+yarn add unibomb
 ```
 ## Usage
 
 ```bash
-unibomb start
+npm start
 ```
 
 ## Contributing
