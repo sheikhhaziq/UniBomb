@@ -16,7 +16,7 @@ document.getElementById('btn').addEventListener('click',()=>{
 })
 
 socket.on('bombing',function(data){
-    document.getElementById('status').innerHTML = 'Bombing...('+data.success+')';
+    document.getElementById('status').innerHTML = 'Attacking...('+data.success+')';
     console.log(data.success)
 })
 
