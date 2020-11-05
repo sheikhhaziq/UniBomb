@@ -41,7 +41,7 @@ io.on('connection', (socket)=>{
 
 
 
-function sendSms(number,count=1,socket){
+async function sendSms(number,count=1,socket){
     var success=0,failed=0;
 fs.readFile('apidata.json',async (err,data) =>{
     if(err) throw err;
