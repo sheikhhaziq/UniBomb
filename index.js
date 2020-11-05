@@ -5,14 +5,14 @@ const socketIO = require('socket.io');
 const fs = require('fs');
 const axios = require('axios');
 const http = require('http');
+const open = require('open');
 
 const app = express()
 let server = http.createServer(app)
-const port = process.env.PORT||3000
 let io = socketIO(server) 
-server.listen(port,()=>{
-   console.log('Visit localhost:'+port);
-});
+server.listen();
+console.log('Unibomb started at localhost:'+server.address().port)
+open('http://localhost:'+server.address().port)
 
 
 app.use(express.static(__dirname + "/public"));
