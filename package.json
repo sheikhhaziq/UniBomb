@@ -4,7 +4,7 @@
   "description": "SMS bombing system from Unicorx by sheikh haziq",
   "main": "index.js",
   "scripts": {
-    "start":"nodemon ./index.js"
+    "start":"node ./index.js"
   },
   "keywords": [],
   "repository": "https://github.com/sheikh-haziq/unibomb",
