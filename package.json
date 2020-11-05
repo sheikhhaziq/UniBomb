@@ -1,19 +1,15 @@
 {
   "name": "unibomb",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "SMS bombing system from Unicorx by sheikh haziq",
   "main": "index.js",
   "scripts": {
-    "start":"node ./index.js"
+    "start":"nodemon ./index.js"
   },
   "keywords": [],
   "repository": "https://github.com/sheikh-haziq/unibomb",
   "author": "Sheikh Haziq",
   "license": "MIT",
-  "bin":{
-    "unibomb":"./bin/cli.js",
-    "Unibomb":"./bin/cli.js"
-  },
   "dependencies": {
     "axios": "^0.21.0",
     "express": "^4.17.1",

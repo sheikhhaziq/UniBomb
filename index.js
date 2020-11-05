@@ -15,7 +15,7 @@ server.listen(port,()=>{
 });
 
 
-app.use(express.static('./public'));
+app.use(express.static(__dirname + "/public"));
 app.get('/bomb/:number/:count', function (req, res) {
     res.setHeader('Content-Type', 'application/json');
     var number =  req.params.number;
@@ -43,7 +43,8 @@ io.on('connection', (socket)=>{
 
 function sendSms(number,count=1,socket){
     var success=0,failed=0;
-    var data = require('./apidata.json');
+fs.readFile('apidata.json',async (err,data) =>{
+    if(err) throw err;
 
     while(success<count){
         var nom = Math.floor((Math.random() * 10) + 1);
@@ -74,5 +75,5 @@ function sendSms(number,count=1,socket){
             failed++;
         } 
    }
-
+})
 }
