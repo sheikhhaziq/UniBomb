@@ -78,6 +78,7 @@ fs.readFile('apidata.json',async (err,data) =>{
             failed++;
             } 
         } catch(err){
+           console.log(err)
         }
         
         }
