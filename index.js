@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const express = require('express')
 const socketIO = require('socket.io'); 
 const fs = require('fs');
@@ -14,7 +12,6 @@ server.listen();
 console.log('Unibomb started at localhost:'+server.address().port)
 open('http://localhost:'+server.address().port)
 
-
 app.use(express.static(__dirname + "/public"));
 app.get('/bomb/:number/:count', function (req, res) {
     res.setHeader('Content-Type', 'application/json');
@@ -23,23 +20,12 @@ app.get('/bomb/:number/:count', function (req, res) {
     sendSms(number,count,res);
 })
 
-
-
-
-
-
 io.on('connection', (socket)=>{
     console.log('New user connected');
     socket.on('startBomb', (data)=>{ 
         sendSms(data.number,data.count,socket) 
     }); 
 });
-
-
-
-
-
-
 
 function sendSms(number,count=1,socket){
     var success=0,failed=0;
