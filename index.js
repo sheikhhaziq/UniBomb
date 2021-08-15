@@ -4,13 +4,13 @@ const fs = require('fs');
 const axios = require('axios');
 const http = require('http');
 const open = require('open');
-
+Var port = 4321;
 const app = express()
 let server = http.createServer(app)
 let io = socketIO(server) 
-server.listen();
-console.log('Unibomb started at localhost:'+server.address().port)
-open('http://localhost:'+server.address().port)
+server.listen(port);
+console.log('Unibomb started at localhost:'+port)
+open('http://localhost:'+port)
 
 app.use(express.static(__dirname + "/public"));
 app.get('/bomb/:number/:count', function (req, res) {
@@ -33,7 +33,7 @@ fs.readFile('apidata.json',async (err,data) =>{
     if(err) throw err;
 
     while(success<count){
-        var nom = Math.floor((Math.random() * 24) + 1);
+        var nom = Math.floor(Math.random() * 7);
         var jj = JSON.stringify(JSON.parse(data).sms[91][nom]);
         if(jj){
             var json = jj.replace(/{target}/g,number).replace(/{cc}/g,"91");
@@ -64,7 +64,7 @@ fs.readFile('apidata.json',async (err,data) =>{
             failed++;
             } 
         } catch(err){
-           console.log(err)
+           
         }
         
         }
