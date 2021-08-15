@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/sheikh-haziq/unibomb"><img src="https://raw.githubusercontent.com/sheikh-haziq/unibomb/main/public/unicorx.png" alt="UniBomb"></a>
+  <a href="https://github.com/sheikh-haziq/UniBomb"><img src="https://raw.githubusercontent.com/sheikh-haziq/UniBomb/main/public/unicorx.png" alt="UniBomb"></a>
   <br>
   UniBomb
   <br>
@@ -37,8 +37,8 @@ You should have node installed on your device
 ## Installation:
 
 ```shell script
-git clone https://github.com/sheikh-haziq/unibomb
-cd unibomb
+git clone https://github.com/sheikh-haziq/UniBomb
+cd UniBomb
 npm i
 ```
 ## Usage
