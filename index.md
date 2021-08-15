@@ -1,37 +1,48 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/sheikh-haziq/UniBomb/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<h1 align="center">
+  <br>
+  <a href="https://github.com/sheikh-haziq/UniBomb"><img src="https://raw.githubusercontent.com/sheikh-haziq/UniBomb/main/public/unicorx.png" alt="UniBomb"></a>
+  <br>
+  UniBomb
+  <br>
+</h1>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<p align="center">A free and open-source SMS bombing application</p>
 
-### Markdown
+## NOTE:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- The application requires active internet connection to contact the APIs
+- You would not be charged for any SMS dispatched as a consequence of this script
+- Always ensure that you are using the latest version of UniBomb
+- This application must not be used to cause harm/discomfort/trouble to others
+- By using this, you agree that you cannot hold the contributors responsible for any misuse
 
-```markdown
-Syntax highlighted code block
+## Compatibility
+You should have node installed on your device
 
-# Header 1
-## Header 2
-### Header 3
+## Devices
+- Windows
+- Linux
+- Mac
+- Android (Termux)
 
-- Bulleted
-- List
+## Features
 
-1. Numbered
-2. List
+- Web Based UI (can be used in browser)
+- Based on Node Js
+- Possibility of international API support (APIs are offline)
+- Flexible with addition of newer APIs with the help of JSON documents
+- Actively supported by the developers with frequent updates and bug-fixes
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
+## Installation:
+
+```shell script
+git clone https://github.com/sheikh-haziq/UniBomb
+cd UniBomb
+npm i
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sheikh-haziq/UniBomb/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Usage
+```shell script
+npm start
+```
