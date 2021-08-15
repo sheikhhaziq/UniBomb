@@ -1,12 +1,12 @@
 {
   "name": "unibomb",
   "version": "1.0.4",
-  "description": "SMS bombing system from Unicorx by sheikh haziq",
+  "description": "SMS bombing system by sheikh haziq",
   "main": "index.js",
   "scripts": {
     "start":"node ./index.js"
   },
-  "keywords": [],
+  "keywords": ["node","sms","sms bombing","UniBomb"],
   "repository": "https://github.com/sheikh-haziq/unibomb",
   "author": "Sheikh Haziq",
   "license": "MIT",
