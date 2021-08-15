@@ -36,12 +36,12 @@ You should have node installed on your device
 
 ## Installation:
 
-```shell script
+```
 git clone https://github.com/sheikh-haziq/UniBomb
 cd UniBomb
 npm i
 ```
 ## Usage
-```shell script
+```
 npm start
 ```
