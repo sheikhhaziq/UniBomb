@@ -21,15 +21,6 @@
                 "identifier": "sent"
             },
             {
-                "name": "frotels",
-                "method": "POST",
-                "url": "https://www.frotels.com/appsendsms.php",
-                "data": {
-                    "mobno": "{target}"
-                },
-                "identifier": "sent"
-            },
-            {
                 "name": "housing",
                 "method": "POST",
                 "url": "https://login.housing.com/api/v2/send-otp",
@@ -62,56 +53,6 @@
                 "identifier": "1"
             },
             {
-                "name": "happyeasygo",
-                "method": "GET",
-                "url": "https://www.happyeasygo.com/heg_api/user/sendRegisterOTP.do",
-                "params": {
-                    "phone": "91%20{target}"
-                },
-                "identifier": "true"
-            },
-            {
-                "name": "unacademy",
-                "method": "POST",
-                "url": "https://unacademy.com/api/v1/user/get_app_link/",
-                "data": {
-                    "phone": "{target}"
-                },
-                "identifier": "sent"
-            },
-            {
-                "name": "airtel",
-                "method": "GET",
-                "url": "https://www.airtel.in/referral-api/core/notify",
-                "params": {
-                    "messageId": "map",
-                    "rtn": "{target}"
-                },
-                "identifier": "Success"
-            },
-            {
-                "name": "mylescars",
-                "method": "POST",
-                "url": "https://www.mylescars.com/usermanagements/chkContact",
-                "data": {
-                    "contactNo": "{target}"
-                },
-                "identifier": "success@::::"
-            },
-            {
-                "name": "grofers",
-                "method": "POST",
-                "url": "https://grofers.com/v2/accounts/",
-                "data": {
-                    "user_phone": "{target}"
-                },
-                "headers": {
-                    "auth_key": "3f0b81a721b2c430b145ecb80cfdf51b170bf96135574e7ab7c577d24c45dbd7",
-                    "User-Agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"
-                },
-                "identifier": "We have sent"
-            },
-            {
                 "name": "dream11",
                 "method": "POST",
                 "url": "https://api.dream11.com/sendsmslink",
@@ -121,36 +62,6 @@
                     "appType": "androidfull"
                 },
                 "identifier": "true"
-            },
-            {
-                "name": "cashify",
-                "method": "GET",
-                "url": "https://www.cashify.in/api/cu01/v1/app-link",
-                "data": {
-                    "mn": "{target}"
-                },
-                "identifier": "Successfully"
-            },
-            {
-                "name": "paytm",
-                "method": "POST",
-                "url": "https://commonfront.paytm.com/v4/api/sendsms",
-                "data": {
-                    "phone": "{target}",
-                    "guid": "2952fa812660c58dc160ca6c9894221d"
-                },
-                "identifier": "202"
-            },
-            {
-                "name": "redbus",
-                "method": "GET",
-                "url": "https://m.redbus.in/api/getOtp",
-                "data": {
-                    "number": "{target}",
-                    "cc": "{cc}",
-                    "whatsAppOpted": false
-                },
-                "identifier": "200"
             },
             {
                 "name": "kfc-in",
@@ -165,94 +76,6 @@
                     "AuthorizedFor": "3",
                     "phoneNumber": "{target}",
                     "Resend": "false"
-                },
-                "identifier": "true"
-            },
-            
-            {
-                "name": "flipkart",
-                "method": "POST",
-                "cc_target": "loginId",
-                "url": "https://www.flipkart.com/api/5/user/otp/generate",
-                "data": {
-                    "loginId": "+{target}"
-                },
-                "headers": {
-                    "X-user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0 FKUA/website/41/website/Desktop",
-                    "Origin": "https://www.flipkart.com",
-                    "Content-Type": "application/x-www-form-urlencoded"
-                },
-                "identifier": "emailMask"
-            },
-            {
-                "name": "qlean",
-                "method": "POST",
-                "url": "https://qlean.ru/clients-api/v2/sms_codes/auth/request_code",
-                "data": {
-                    "phone": "{cc}{target}"
-                },
-                "identifier": "request_id"
-            },
-            {
-                "name": "mailru",
-                "method": "POST",
-                "url": "https://cloud.mail.ru//api/v2/notify/applink",
-                "data": {
-                    "phone": "+{cc}{target}",
-                    "api": "2",
-                    "email": "email",
-                    "x-email": "x-email"
-                },
-                "identifier": "200"
-            },
-            {
-                "name": "youla",
-                "method": "POST",
-                "url": "https://youla.ru/web-api/auth/request_code",
-                "data": {
-                    "phone": "+{cc}{target}"
-                },
-                "identifier": ":6"
-            },
-            {
-                "name": "ivi",
-                "method": "POST",
-                "url": "https://api.ivi.ru/mobileapi/user/register/phone/v6",
-                "data": {
-                    "phone": "{cc}{target}"
-                },
-                "identifier": "true"
-            },
-            {
-                "name": "delitime",
-                "method": "POST",
-                "url": "https://api.delitime.ru/api/v2/signup",
-                "data": {
-                    "SignupForm[username]": "{cc}{target}",
-                    "SignupForm[device_type]": "3"
-                },
-                "identifier": "true"
-            },
-            {
-                "name": "icq",
-                "method": "POST",
-                "url": "https://www.icq.com/smsreg/requestPhoneValidation.php",
-                "data": {
-                    "msisdn": "{cc}{target}",
-                    "locale": "en",
-                    "k": "ic1rtwz1s1Hj1O0r",
-                    "r": "45559"
-                },
-                "identifier": "200"
-            },
-            {
-                "name": "ivitv",
-                "method": "POST",
-                "url": "https://api.ivi.ru/mobileapi/user/register/phone/v6/",
-                "data": {
-                    "phone": "{cc}{target}",
-                    "device": "Windows+v.43+Chrome+v.7453451",
-                    "app_version": "870"
                 },
                 "identifier": "true"
             }
