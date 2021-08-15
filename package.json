@@ -1,7 +1,7 @@
 {
   "name": "unibomb",
   "version": "1.0.4",
-  "description": "SMS bombing system by sheikh haziq",
+  "description": "A free and open-source SMS bombing application",
   "main": "index.js",
   "scripts": {
     "start":"node ./index.js"
