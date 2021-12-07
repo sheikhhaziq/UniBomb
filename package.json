@@ -7,7 +7,7 @@
     "start":"node ./index.js"
   },
   "keywords": ["node","sms","sms bombing","UniBomb"],
-  "repository": "https://github.com/sheikh-haziq/unibomb",
+  "repository": "https://github.com/sheikhhaziq/unibomb",
   "author": "Sheikh Haziq",
   "license": "MIT",
   "dependencies": {
