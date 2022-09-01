@@ -29,7 +29,7 @@ You should have node installed on your device
 
 - Web Based UI (can be used in browser)
 - Based on Node Js
-- Possibility of international API support (APIs are offline)
+- Possibility of international API support
 - Flexible with addition of newer APIs with the help of JSON documents
 - Actively supported by the developers with frequent updates and bug-fixes
 
